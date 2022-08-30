@@ -4,6 +4,7 @@ const nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13
 interface BoardProps {
     row: number;
     col: number;
+    mode?: string;
 }
 
 const Board = (boardInfo:BoardProps) => {
@@ -15,11 +16,12 @@ const Board = (boardInfo:BoardProps) => {
         if (number % 2 === 0) {
             board.push(<div className='bg-green-600 hover:bg-opacity-50 cursor-grab' key={key}>{alphabet[i]}{nums[j]}</div>);
         } else {
-            board.push(<div className='bg-gray-400 hover:bg-opacity-50 cursor-grab' key={key}>{alphabet[i]}{nums[j]}</div>);
+            board.push(<div className='bg-yellow-100 hover:bg-opacity-50 cursor-grab' key={key}>{alphabet[i]}{nums[j]}</div>);
         }
     }
   }
-  let styles = `grid grid-cols-${boardInfo.col} grid-rows-${boardInfo.row}`;
+  let styles = `grid grid-rows-${boardInfo.row} grid-cols-${boardInfo.col}`;
+  console.log(styles)
   return <div className={styles}>{board}</div>;
 };
 
