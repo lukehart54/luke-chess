@@ -68,7 +68,7 @@ const Options = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box width={800}>
+      <Box width={600}>
         Board Max: {alphabet[rowValue - 1]} {nums[colValue - 1]}
         <Board row={rowValue} col={colValue} />
       </Box>
