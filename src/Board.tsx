@@ -15,7 +15,7 @@ const Board = (boardInfo:BoardProps) => {
   let letterCords2 = [];
   letterCords.push(<br/>);
   for (let x = 0; x < boardInfo.col; x++) {
-    letterCords.push(<div className="grid justify-center">{alphabet[x]}</div>);
+    letterCords.push(<div className="grid w-12 justify-center">{alphabet[x]}</div>);
   }
   letterCords.push(<br />);
   for (let j = boardInfo.row - 1; j >= 0; j--) {
@@ -25,7 +25,7 @@ const Board = (boardInfo:BoardProps) => {
         let key = alphabet[i] + nums[j];
         board.push(<Tile key={key} cord={key} num={number} />);
     }
-    board.push(<div className="grid justify-center">{j + 1}</div>);
+    board.push(<div className="grid w-12 justify-center">{j + 1}</div>);
   }
   let styles = `grid grid-rows-${boardInfo.row} grid-cols-${boardInfo.col + 2}`;
 

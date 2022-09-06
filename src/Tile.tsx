@@ -11,9 +11,9 @@ const Tile = (props:TileProps) => {
         // console.log(props.num, props.k)
         if (props.num % 2 === 0) {
           //{alphabet[i]}{nums[j]}
-            return <div className='bg-green-600 hover:bg-opacity-50 cursor-grab' key={props.cord}><br/></div>
+            return <div onClick={() => {console.log(props.cord)}} className='bg-green-600 hover:bg-opacity-50 cursor-grab' key={props.cord}><br/></div>
         } else {
-            return <div className='bg-yellow-100 hover:bg-opacity-50 cursor-grab' key={props.cord}><br/></div>
+            return <div onClick={() => {console.log(props.cord)}} className='bg-yellow-100 hover:bg-opacity-50 cursor-grab' key={props.cord}><br/></div>
         }
     }
 
